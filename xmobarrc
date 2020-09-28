@@ -1,0 +1,26 @@
+Config { font = "xft:Font Awesome 5 Free Solid:style=Solid:pixelsize=13:antialias=true:hinting=true, Hack:pixelsize=12:antialias=true:hinting=true"
+       , additionalFonts = ["xft:Hack:pixelsize=12:antialias=true:hinting=true"]
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "black"
+       , fgColor = "grey"
+       , alpha = 130
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = False
+       , commands = [ Run Com "/home/harjots/.config/i3blocks/i3blocks-contrib/volume-pulseaudio/volume-pulseaudio2" [] "volume" 1
+            ,Run Com "/home/harjots/.config/i3blocks/i3blocks-contrib/cpu_usage/cpu_usage2" [] "cpu" 1
+            ,Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader%}\
+                    \{%volume% // CPU: %cpu% "
+       }
